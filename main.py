@@ -1,3 +1,7 @@
+import streamlit as st
+
+# HTML をそのまま埋め込む
+html_code = """
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -26,7 +30,7 @@
         .hero {
             width: 100%;
             height: 280px;
-            background-image: url('vietnam-shop.jpg'); /* ← 写真を差し替えてね */
+            background-image: url('vietnam-shop.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -139,3 +143,7 @@
 
 </body>
 </html>
+"""
+
+# Streamlit に表示
+st.components.v1.html(html_code, height=2000, scrolling=True)
