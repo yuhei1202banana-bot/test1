@@ -1,6 +1,5 @@
 import streamlit as st
 
-# HTML をそのまま埋め込む
 html_code = """
 <!DOCTYPE html>
 <html lang="ja">
@@ -145,5 +144,4 @@ html_code = """
 </html>
 """
 
-# Streamlit に表示
-st.components.v1.html(html_code, height=2000, scrolling=True)
+st.components.v1.html(html_code, height=2000)
