@@ -1,7 +1,7 @@
 import streamlit as st
 
 # ページ設定
-st.set_page_config(page_title="Aoki Yuu - 自己紹介", layout="wide")
+st.set_page_config(page_title="Aoki ren - 自己紹介", layout="wide")
 
 # === 画像パス（相対パス） ===
 img_singapore = "9EE65E4D-EB35-4FE8-88D0-A7E5DD4F8E95 (1).jpeg"
@@ -53,9 +53,9 @@ st.markdown(f"""
 st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.header("一人旅が好きです")
 st.write("""
-知らない場所を歩くと、心が自由になる気がします。  
+知らない場所を歩くと、心が自由になる気がします!!  
 この写真はシンガポールの Gardens by the Bay で撮ってもらった一枚。  
-自分の世界を広げたいという気持ちで旅を続けています。
+自分の世界を広げたいという気持ちで旅を続けています!!
 """)
 st.image(img_singapore, use_container_width=True)
 st.markdown("</div>", unsafe_allow_html=True)
@@ -67,7 +67,7 @@ st.header("人との出会いが好きです")
 st.write("""
 日本でも海外でも、いろんな国の人と出会ってきました。  
 浅草を案内すると驚いた顔を見せてくれる人が多くて、  
-「体験を共有するってすごく素敵だな」と感じます。  
+「体験を共有するってすごく素敵だな」と感じました！
 観光地よりも、人と気持ちがつながる瞬間のほうが心に残ります。
 """)
 st.image(img_asakusa, use_container_width=True)
@@ -107,6 +107,6 @@ st.markdown("</div>", unsafe_allow_html=True)
 # === フッター ===
 st.markdown("""
 <div style="text-align:center; margin-top:60px; color:#777;">
-© 2025 Aoki Yuu
+© 2025 Aoki ren
 </div>
 """, unsafe_allow_html=True)
