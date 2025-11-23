@@ -43,7 +43,7 @@ header {
 st.markdown(f"""
 <header style="background-image: url('{img_singapore}')">
     <h1 style="font-size: 36px; text-shadow: 0 0 15px rgba(0,0,0,0.7);">
-        Aoki Yuu
+        Aoki ren
     </h1>
 </header>
 """, unsafe_allow_html=True)
@@ -67,7 +67,7 @@ st.header("人との出会いが好きです")
 st.write("""
 日本でも海外でも、いろんな国の人と出会ってきました。  
 浅草を案内すると驚いた顔を見せてくれる人が多くて、  
-「体験を共有するってすごく素敵だな」と感じました！
+「体験を共有するってすごく素敵だな」と感じました！  
 観光地よりも、人と気持ちがつながる瞬間のほうが心に残ります。
 """)
 st.image(img_asakusa, use_container_width=True)
