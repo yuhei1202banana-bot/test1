@@ -3,10 +3,10 @@ import streamlit as st
 # ページ設定
 st.set_page_config(page_title="Aoki Yuu - 自己紹介", layout="wide")
 
-# === 画像パス（絶対パス） ===
-img_singapore = r"C:\Users\yuhei\OneDrive\デスクトップ\test1\9EE65E4D-EB35-4FE8-88D0-A7E5DD4F8E95 (1).jpeg"
-img_asakusa   = r"C:\Users\yuhei\OneDrive\デスクトップ\test1\462A7DD2-860C-4FD3-90CE-4C2D90F2CFAF.jpeg"
-img_cappadocia = r"C:\Users\yuhei\OneDrive\デスクトップ\test1\A7C25E08-CB8F-4520-B7BC-6815D8155EBF.jpeg"
+# === 画像パス（相対パス） ===
+img_singapore = "9EE65E4D-EB35-4FE8-88D0-A7E5DD4F8E95 (1).jpeg"
+img_asakusa   = "462A7DD2-860C-4FD3-90CE-4C2D90F2CFAF.jpeg"
+img_cappadocia = "A7C25E08-CB8F-4520-B7BC-6815D8155EBF.jpeg"
 
 
 # === CSS ===
@@ -39,7 +39,7 @@ header {
 """, unsafe_allow_html=True)
 
 
-# === ヘッダー（背景に1枚目の画像） ===
+# === ヘッダー（背景に1枚目） ===
 st.markdown(f"""
 <header style="background-image: url('{img_singapore}')">
     <h1 style="font-size: 36px; text-shadow: 0 0 15px rgba(0,0,0,0.7);">
@@ -92,7 +92,7 @@ st.image(img_cappadocia, use_container_width=True)
 st.markdown("</div>", unsafe_allow_html=True)
 
 
-# === 目標 ===
+# === 最後 ===
 st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.header("これからの目標")
 st.write("""
