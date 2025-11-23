@@ -1,147 +1,112 @@
 import streamlit as st
 
-html_code = """
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vietnam Souvenir Shop</title>
+# ページ設定
+st.set_page_config(page_title="Aoki Yuu - 自己紹介", layout="wide")
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Helvetica", sans-serif;
-            background: #fff8e6;
-            color: #333;
-        }
+# === 画像パス（絶対パス） ===
+img_singapore = r"C:\Users\yuhei\OneDrive\デスクトップ\test1\9EE65E4D-EB35-4FE8-88D0-A7E5DD4F8E95 (1).jpeg"
+img_asakusa   = r"C:\Users\yuhei\OneDrive\デスクトップ\test1\462A7DD2-860C-4FD3-90CE-4C2D90F2CFAF.jpeg"
+img_cappadocia = r"C:\Users\yuhei\OneDrive\デスクトップ\test1\A7C25E08-CB8F-4520-B7BC-6815D8155EBF.jpeg"
 
-        header {
-            background: #d35400;
-            padding: 18px;
-            color: #fff;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
 
-        .hero {
-            width: 100%;
-            height: 280px;
-            background-image: url('vietnam-shop.jpg');
-            background-size: cover;
-            background-position: center;
-        }
+# === CSS ===
+st.markdown("""
+<style>
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+header {
+    background: #222;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+.photo {
+    width: 100%;
+    border-radius: 14px;
+    margin-top: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+</style>
+""", unsafe_allow_html=True)
 
-        .section {
-            padding: 30px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
 
-        .title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 12px;
-            color: #d35400;
-        }
-
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .product {
-            background: #fff;
-            border-radius: 12px;
-            padding: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .product img {
-            width: 100%;
-            height: 130px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        .product-name {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        .product-price {
-            color: #d35400;
-            margin-top: 5px;
-        }
-
-        footer {
-            background: #d35400;
-            color: #fff;
-            padding: 18px;
-            text-align: center;
-            margin-top: 40px;
-        }
-    </style>
-</head>
-
-<body>
-
-<header>
-    Vietnam Souvenir Shop
+# === ヘッダー（背景に1枚目の画像） ===
+st.markdown(f"""
+<header style="background-image: url('{img_singapore}')">
+    <h1 style="font-size: 36px; text-shadow: 0 0 15px rgba(0,0,0,0.7);">
+        Aoki Yuu
+    </h1>
 </header>
+""", unsafe_allow_html=True)
 
-<div class="hero"></div>
 
-<div class="section">
-    <div class="title">人気のお土産</div>
+# === セクション1 ===
+st.markdown("<div class='section'>", unsafe_allow_html=True)
+st.header("一人旅が好きです")
+st.write("""
+知らない場所を歩くと、心が自由になる気がします。  
+この写真はシンガポールの Gardens by the Bay で撮ってもらった一枚。  
+自分の世界を広げたいという気持ちで旅を続けています。
+""")
+st.image(img_singapore, use_container_width=True)
+st.markdown("</div>", unsafe_allow_html=True)
 
-    <div class="products">
-        <div class="product">
-            <img src="coffee.jpg" alt="Vietnam Coffee">
-            <div class="product-name">ベトナムコーヒー</div>
-            <div class="product-price">150,000 VND</div>
-        </div>
 
-        <div class="product">
-            <img src="ao-dai.jpg" alt="Ao Dai">
-            <div class="product-name">アオザイ ミニチュア</div>
-            <div class="product-price">200,000 VND</div>
-        </div>
+# === セクション2 ===
+st.markdown("<div class='section'>", unsafe_allow_html=True)
+st.header("人との出会いが好きです")
+st.write("""
+日本でも海外でも、いろんな国の人と出会ってきました。  
+浅草を案内すると驚いた顔を見せてくれる人が多くて、  
+「体験を共有するってすごく素敵だな」と感じます。  
+観光地よりも、人と気持ちがつながる瞬間のほうが心に残ります。
+""")
+st.image(img_asakusa, use_container_width=True)
+st.markdown("</div>", unsafe_allow_html=True)
 
-        <div class="product">
-            <img src="bag.jpg" alt="Handmade Bag">
-            <div class="product-name">ハンドメイドバッグ</div>
-            <div class="product-price">180,000 VND</div>
-        </div>
 
-        <div class="product">
-            <img src="lantern.jpg" alt="Hoi An Lantern">
-            <div class="product-name">ホイアン ランタン</div>
-            <div class="product-price">250,000 VND</div>
-        </div>
-    </div>
+# === セクション3 ===
+st.markdown("<div class='section'>", unsafe_allow_html=True)
+st.header("価値観が変わった瞬間")
+st.write("""
+トルコのカッパドキアで気球に乗った朝、  
+隣の女性が景色に感動して涙を流していました。  
+その姿を見て、ふと気づきました。  
+
+**「体験をもらうだけじゃなく、自分も誰かに届けたい」**  
+
+この経験をきっかけに、アプリ開発に興味を持ちました。  
+まだ始めたばかりですが、いつか誰かの心を動かすサービスを作りたい。  
+小さな一歩ですが、そんな気持ちで学び続けています。
+""")
+st.image(img_cappadocia, use_container_width=True)
+st.markdown("</div>", unsafe_allow_html=True)
+
+
+# === 目標 ===
+st.markdown("<div class='section'>", unsafe_allow_html=True)
+st.header("これからの目標")
+st.write("""
+旅で感じた “心が動く瞬間” を、今度は自分の手で作りたいと思っています。  
+アプリ開発はまだ始めたばかりですが、  
+誰かの毎日を少し明るくできるような体験を届けたい。  
+そんな気持ちで挑戦を続けます。
+""")
+st.markdown("</div>", unsafe_allow_html=True)
+
+
+# === フッター ===
+st.markdown("""
+<div style="text-align:center; margin-top:60px; color:#777;">
+© 2025 Aoki Yuu
 </div>
-
-<div class="section">
-    <div class="title">店舗情報</div>
-    <p>
-        住所：Hanoi Old Quarter, Vietnam<br>
-        営業時間：9:00〜21:00<br>
-        電話：012-3456-789
-    </p>
-</div>
-
-<footer>
-    © 2025 Vietnam Souvenir Shop
-</footer>
-
-</body>
-</html>
-"""
-
-st.components.v1.html(html_code, height=2000)
+""", unsafe_allow_html=True)
